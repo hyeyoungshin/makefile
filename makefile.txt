@@ -1,0 +1,10 @@
+minesweeper: board.o referee.o ui.o
+    gcc board.c referee.c ui.c -o minesweeper
+
+board.o: board.c
+    gcc -c board.c -o board.o
+    
+referee.o: referee.c board.o
+    gcc -c referee.c -o referee.o
+ui.o: ui.c
+    gcc -c ui.c -o ui.o 
